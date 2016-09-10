@@ -103,7 +103,7 @@ How you would like to spend your time?".format(recipient_name, ride_time)
                          headers={'Content-type': 'application/json'})
         if res.status_code != requests.codes.ok:
             print res.text
-        return HttpResponse()
+        return HttpResponse(json.dumps({"ba" : "cd"}), content_type="application/json")
 
 
 
